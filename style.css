@@ -1,0 +1,182 @@
+/* ===== ไฟล์ตกแต่ง (CSS) =====
+   อยากเปลี่ยนสีหลัก ให้แก้ #1f3a5f ทุกจุดเป็นสีที่ชอบ */
+
+html { scroll-behavior: smooth; }  /* เลื่อนหน้าแบบนุ่มๆ */
+
+body {
+  font-family: "Sarabun", sans-serif;  /* ฟอนต์ไทย ถ้าโหลดไม่ได้ใช้ฟอนต์ระบบแทน */
+  margin: 0;
+  color: #2b2b2b;
+  background: #f7f8fa;      /* พื้นหลังเทาอ่อนมาก */
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* ส่วนบนสุด */
+header {
+  background: #1f3a5f;
+  color: white;
+  text-align: center;
+  padding: 48px 20px 40px;
+}
+
+header h1 { margin: 0; font-size: 36px; }
+header p  { margin: 4px 0 0 0; font-size: 20px; opacity: 0.9; }
+
+/* รูปโปรไฟล์วงกลม */
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid white;
+  margin-bottom: 12px;
+}
+
+/* กล่องเนื้อหากลางจอ มีพื้นขาว */
+.box {
+  max-width: 760px;
+  margin: 32px auto;
+  padding: 16px 32px 32px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* หัวข้อแต่ละส่วน */
+h2 {
+  color: #1f3a5f;
+  font-size: 24px;
+  margin: 36px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #1f3a5f;
+}
+
+h3 { margin: 0; font-size: 19px; }
+
+p { margin: 0 0 8px 0; }
+
+ul { margin: 8px 0; padding-left: 24px; }
+
+
+.job {
+  border-left: 4px solid #1f3a5f;
+  padding-left: 16px;
+  margin-bottom: 16px;
+}
+
+
+.job-info {
+  color: #666;
+  font-size: 16px;
+}
+
+a { color: #1f3a5f; }
+
+footer {
+  text-align: center;
+  color: #777;
+  font-size: 15px;
+  padding: 8px 20px 32px;
+}
+
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  header h1 { font-size: 30px; }
+  .box { margin: 16px 12px; padding: 8px 20px 24px; }
+}
+
+
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;   
+  flex-wrap: wrap;           
+  margin-top: 20px;
+}
+.buttons.left { justify-content: flex-start; margin-top: 16px; }
+
+.btn {
+  display: inline-block;
+  padding: 8px 22px;
+  border-radius: 999px;      
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;  
+}
+.btn.small { padding: 4px 16px; font-size: 15px; }
+
+
+.btn-light   { background: white; color: #1f3a5f; }
+.btn-light:hover   { background: #dfe7f2; }
+.btn-outline { border-color: white; color: white; }
+.btn-outline:hover { background: rgba(255, 255, 255, 0.15); }
+
+
+.btn-dark { background: #1f3a5f; color: white; }
+.btn-dark:hover { background: #2d5086; }
+.btn-line { border-color: #1f3a5f; color: #1f3a5f; }
+.btn-line:hover { background: #eaf0f8; }
+
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  padding: 12px 16px;
+  background: white;
+  border-bottom: 1px solid #e3e6eb;
+}
+.menu a {
+  padding: 4px 14px;
+  border-radius: 999px;
+  color: #444;
+  font-size: 16px;
+  text-decoration: none;
+}
+.menu a:hover { background: #eaf0f8; color: #1f3a5f; }
+
+h2 { scroll-margin-top: 16px; }
+
+
+a:focus-visible { outline: 3px solid #6c9bd8; outline-offset: 2px; }
+
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
+}
+
+
+header p.sub { font-size: 16px; opacity: 0.75; margin-top: 2px; }
+
+
+.job-title { margin: 12px 0 0 0; font-weight: 600; }
+
+
+.skill-group { margin-bottom: 12px; }
+.skill-group h3 { color: #1f3a5f; font-size: 17px; }
+.skill-group p { color: #444; font-size: 17px; }
+
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.project {
+  border: 1px solid #dfe3e9;
+  border-radius: 10px;
+  padding: 16px;
+  background: #fbfcfd;
+}
+.project h3 { margin-bottom: 6px; color: #1f3a5f; font-size: 18px; }
+.project p { font-size: 16px; color: #555; margin: 0; }
+
+.work-img { width: 100%; border-radius: 8px; margin-bottom: 10px; }
